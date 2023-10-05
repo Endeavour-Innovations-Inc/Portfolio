@@ -1,28 +1,27 @@
 const express = require('express');
+const path = require('path');  // Include the path module
 const app = express();
 const PORT = 3000;
 
 // Serve static files from the "public" directory
+app.use(express.static('views'));
 app.use(express.static('public'));
 
-// Using EJS for demonstration purposes
-app.set('view engine', 'ejs');
-
-app.get('/', (req, res) => {
-    res.render('index');
-});
-
+// Explicit route for /software-engineering
 app.get('/software-engineering', (req, res) => {
-    res.render('software-engineering');
+    res.sendFile(path.join(__dirname, 'views', 'software-engineering.html'));
 });
 
-app.get('/hardware-engineering', (req, res) => {
-    res.render('hardware-engineering');
-});
+// If you have other pages like /computer-engineering and /electrical-engineering, 
+// you can similarly define explicit routes for them:
 
-app.get('/electrical-engineering', (req, res) => {
-    res.render('electrical-engineering');
-});
+// app.get('/computer-engineering', (req, res) => {
+//     res.sendFile(path.join(__dirname, 'views', 'computer-engineering.html'));
+// });
+
+// app.get('/electrical-engineering', (req, res) => {
+//     res.sendFile(path.join(__dirname, 'views', 'electrical-engineering.html'));
+// });
 
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
