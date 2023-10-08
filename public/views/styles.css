@@ -5,6 +5,18 @@ body, html {
     overflow: hidden;
 }
 
+body {
+    /* Handle safe area insets */
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+}
+
+body {
+    overflow-x: hidden; /* Prevent horizontal scroll if it occurs */
+}
+
 #bgvid {
     position: fixed;
     top: 0;
