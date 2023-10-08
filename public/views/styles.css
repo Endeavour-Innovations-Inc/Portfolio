@@ -13,7 +13,7 @@ body, html {
     height: 100%;
     z-index: -100;
     background-size: cover;
-    object-fit: cover; /* This will ensure the video covers the entire viewport */
+    object-fit: cover;
 }
 
 .content {
@@ -24,41 +24,41 @@ body, html {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* Add any other styling you want for your content here */
 }
 
-.content h1:first-child { /* Targets the first h1 element inside .content */
-    margin-bottom: 10px; /* Adjust as necessary */
+.content h1:first-child {
+    margin-bottom: 10px;
 }
 
 .content h1 {
     margin: 0;
-    margin-bottom: 10px; /* Adjust as necessary */
+    margin-bottom: 10px;
     color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional: Adds a shadow to the text for better readability */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center; /* Ensure text is centered */
 }
 
 .name-link {
-    color: #00BFFF; /* Sky blue color for name */
+    color: #00BFFF;
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .name-link:hover {
-    color: #007FFF; /* Darken the blue slightly on hover */
+    color: #007FFF;
 }
 
 .content p {
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    margin: 10px 0; /* Spacing between title and this subtitle */
+    margin: 10px 0;
 }
 
 .button-group {
     display: flex;
-    flex-direction: column;  /* Stack buttons vertically */
-    gap: 10px;               /* Space between buttons */
-    margin-top: 15px;        /* Space between subtitle and buttons */
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
 }
 
 .nav-button {
@@ -68,10 +68,18 @@ body, html {
     color: white;
     text-decoration: none;
     border-radius: 8px;
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .nav-button:hover {
-    background-color: rgba(255, 255, 255, 0.1); /* Slight white tint on hover */
-    color: #00BFFF; /* Change text color to the blue on hover */
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #00BFFF;
+}
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
+    .content h1 {
+        font-size: 1.5rem; /* Reduce font size for mobile */
+        padding: 0 20px;  /* Add some padding to ensure text doesn't touch the edges */
+    }
 }
