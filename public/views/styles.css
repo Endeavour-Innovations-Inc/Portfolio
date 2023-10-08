@@ -26,6 +26,9 @@ body {
     z-index: -100;
     background-size: cover;
     object-fit: cover;
+    background-size: cover;
+    width: 100vw; /* viewport width */
+    height: 100vh; /* viewport height */
 }
 
 .content {
@@ -95,3 +98,9 @@ body {
         padding: 0 20px;  /* Add some padding to ensure text doesn't touch the edges */
     }
 }
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
